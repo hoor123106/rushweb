@@ -1,5 +1,5 @@
 "use client"
-
+    import Image from "next/image"
 import styles from "./ProductUx.module.css"
 
 export default function ProductUXPage() {
@@ -9,7 +9,14 @@ export default function ProductUXPage() {
         <div className={styles.card}>
 
           <div className={styles.Productsheader}>
-            <img src="/images/logo.svg" alt="Logo" className={styles.logoIcon} />
+          <Image
+                      src="/images/logo.svg"
+                      width={50}
+                      height={50}
+
+                      alt="Logo" 
+                    
+                    className={styles.logoIcon} />
             <span className={styles.brandName}>rush web studio</span>
           </div>
 

@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import styles from "./Pacakages.module.css"
 
-import logo from "../../public/images/logo.svg"
+
 
 type ServicePlan = {
   name: string
@@ -157,7 +157,14 @@ export default function PackagesSection() {
               <div>
                 <div className={styles.badge}>
                   <div className={styles.badgeHeader}>
-                    <img src="/images/logo.svg" alt="Logo" className={styles.logoIcon} />
+                    <Image
+                      src="/images/logo.svg"
+                      width={50}
+                      height={50}
+
+                      alt="Logo" className={styles.logoIcon}
+                      priority
+                    />
                     <span className={styles.badgeText}>{currentPlan.badge}</span>
                   </div>
 

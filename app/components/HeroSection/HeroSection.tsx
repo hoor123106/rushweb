@@ -36,14 +36,14 @@ export default function Hero() {
       <div className={styles.leftColumn}>
         <div className={styles.brandHeader}>
           <div className={styles.brandlogo}>
-           <Image
-               src="/images/logoWithname.png"
-               alt="Logo"
-               width={160}
-               height={40}
-               className={styles.logoImage}
-               priority
-             />
+       <Image
+                 src="/images/Logo.svg"
+                 alt="Logo"
+                 width={160}
+                 height={48}
+                 className={styles.logoImg}
+                 priority
+               />
           </div>
           <div className={styles.brandTextGroup}>
             <span className={styles.brandNameLine}>rush.</span>
