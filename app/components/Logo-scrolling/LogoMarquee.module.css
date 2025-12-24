@@ -1,0 +1,23 @@
+.logoCloudContainer {
+  width: 100%;
+  overflow: hidden;
+  padding: 1.2rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.logoCloudTrack {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  width: max-content;
+}
+
+.logoWrapper {
+  flex-shrink: 0;
+}
+
+.scrollLogo {
+  height: 80px;
+  width: auto;
+}

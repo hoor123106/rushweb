@@ -1,0 +1,174 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+  font-family: sans-serif;
+  background-color: #FFF9F5;
+  border-left: 1px solid #e5e7eb;
+  max-width: 1818px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 938px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+
+}
+
+.title {
+  font-size: 56px;
+  font-weight: 700;
+  color: #4E0109;
+  text-align: center;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.highlight {
+  color: #BCA68B;
+}
+
+.tabsOuter {
+  background-color: #FFFFFF;
+  padding: 4px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 382px;
+  height: 38px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tabList {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tabButton {
+  position: relative;
+  width: 98px;
+  height: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #80000F;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.activeTab {
+  background-color: #FFF9F5;
+  color: #000000;
+}
+
+.activeUnderline {
+  position: absolute;
+  bottom: 0px;
+  left: 15%;
+  right: 15%;
+  height: 2px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+.tableCard {
+  width: 100%;
+  background: white;
+  border: 1px solid #edf2f7;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.headerCell {
+  padding: 24px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #28282F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+}
+
+.headerCell:first-child {
+  border-right: 1px solid #D9D9D9;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.rowGray {
+  background-color: #F1DCDB;
+}
+
+.rowWhite {
+  background-color: #ffffff;
+}
+
+.cell {
+  padding: 35px 20px;
+  font-size: 16px;
+  color: #28282F;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 72px;
+}
+
+.cell:first-child {
+  border-right: 1px solid #D9D9D9;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 382px;
+    gap: 24px;
+    max-width: 976px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .tabsOuter {
+    transform: scale(0.9);
+  }
+
+  .headerCell {
+    font-size: 18px;
+    padding: 16px;
+  }
+
+  .cell {
+    padding: 25px 10px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}

@@ -1,0 +1,85 @@
+.howWorkSection {
+  padding: 23px 20px;
+  text-align: center;
+  margin-top: 90px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.howWorkMainTitle {
+  font-size: 45px;
+  color: #3b1616;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.howWorkAccent {
+  color: #c1ada1;
+}
+
+.howWorkGrid {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.howWorkCard {
+  background-color: #F1DCDB;
+  border-radius: 20px;
+  padding: 35px 25px;
+  width: 302px;
+  height: 385px;
+  opacity: 1;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.howWorkContent {
+  position: relative;
+  z-index: 2;
+}
+
+.howWorkCardTitle {
+  font-size: 23px;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.howWorkCardDesc {
+  font-size: 20px;
+  color: #28282F;
+  line-height: 1.5;
+}
+
+.howWorkStepWatermark {
+  position: absolute;
+  bottom: -50px;
+  left: 10px;
+  font-size: 100px;
+  opacity: 0.56;
+  font-weight: 600;
+  color: #4E0109;
+  letter-spacing: -5px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .howWorkGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .howWorkMainTitle {
+    font-size: 30px;
+  }
+
+  .howWorkCard {
+    width: 100%;
+  }
+}

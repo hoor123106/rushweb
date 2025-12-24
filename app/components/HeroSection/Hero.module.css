@@ -1,0 +1,203 @@
+.heroContainer {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.leftColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 30px 20px 15px 55px;
+  border-right: 1px solid #e5e7eb;
+  overflow: hidden;
+  position: relative;
+  margin-right: 30px;
+}
+
+.rightColumn {
+  flex: 1.8;
+  padding: 7rem 40px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.brandHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brandlogo img {
+  height: 45px;
+  width: auto;
+}
+
+.brandTextGroup {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brandNameLine {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000839;
+  text-transform: lowercase;
+}
+
+.mainTitle {
+  font-size: 39px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+
+.mainDescription {
+  font-size: 20px;
+  color: #000000;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+
+.primaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(90deg, #040404 0%, #500109 50%, #040404 100%);
+  color: #ffffff;
+  border-radius: 8px;
+  height: 48px;
+  padding: 0 24px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.secondaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #FFF9F5;
+  border: 1px solid #790808;
+  border-radius: 10px;
+  height: 48px;
+  padding: 0 24px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  min-width: max-content;
+  color: #000000;
+}
+
+.avatarSmall {
+  border-radius: 50%;
+}
+
+.testimonialCard {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e6e6e6;
+  padding: 24px;
+  width: 100%;
+}
+
+.testimonialText {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000;
+  margin-bottom: 16px;
+}
+
+.authorArea {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.authorAvatar {
+  border-radius: 50%;
+}
+
+.authorName {
+  font-weight: 700;
+  font-size: 16px;
+  color: #000000;
+}
+
+.authorTitle {
+  font-size: 14px;
+  color: black;
+  font-weight: 600;
+}
+
+.projectTrack {
+  display: flex;
+  gap: 32px;
+  width: max-content;
+  align-items: center;
+}
+
+.projectCard {
+  flex-shrink: 0;
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.projectImageWrapper {
+  width: 550px;
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .heroContainer {
+    flex-direction: column;
+  }
+
+  .leftColumn {
+    padding: 40px 47px;
+    margin-right: 0;
+    max-width: 976px;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 240px;
+    height: 48px;
+    justify-content: center;
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 644px) {
+  .leftColumn {
+    padding: 32px 30px;
+  }
+}

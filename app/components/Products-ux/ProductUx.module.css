@@ -1,0 +1,156 @@
+.container {
+  min-height: 100vh;
+  background-color: #FFF9F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  font-family: sans-serif;
+  border-left: 1px solid #e5e7eb;
+  max-width: 1818px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 938px;
+}
+
+.card {
+  border-radius: 24px;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  padding: 48px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.Productsheader {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #e5e7eb;
+  width: fit-content;
+  padding: 6px 16px;
+  border-radius: 999px;
+}
+
+.logoIcon {
+  height: 20px;
+  width: auto;
+}
+
+.brandName {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+}
+
+.heading {
+  margin-bottom: 16px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #000839;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.headingHighlight {
+  color: #4E0109;
+}
+
+.description {
+  margin-bottom: 32px;
+  font-size: 18px;
+  margin-left: 5px;
+  color: #28282F;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.badgesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.badge {
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  width: fit-content;
+}
+
+.badgeRed {
+  background-color: #FFF3F4;
+  border: 1px solid #FF6373;
+  color: #962732;
+  border-radius: 999px;
+}
+
+.badgeBlue {
+  background-color: #F0F4FF;
+  color: #2D3791;
+  border: 1px solid #6E63FF;
+  border-radius: 999px;
+}
+
+.badgeOrange {
+  background-color: #FFF7ED;
+  color: #854D0E;
+  border: 1px solid #FF9F63;
+  border-radius: 12px;
+}
+
+.Productsbutton {
+  border-radius: 10px;
+  background: linear-gradient(90deg, #4E0109 0%, #000000 100%);
+  padding: 14px 28px;
+  font-weight: 700;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+  height: 48px;
+  width: 250px;
+}
+
+.Productsbutton:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 976px;
+    padding: 24px;
+  }
+
+  .wrapper {
+    max-width: 912px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .card {
+    padding: 24px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .Productsbutton {
+    width: 100%;
+  }
+}
