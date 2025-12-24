@@ -3,11 +3,17 @@
 import { useState } from "react"
 import styles from "./Delivery.module.css"
 
-export default function Delivery() {
-  const [activeTab, setActiveTab] = useState("Web Apps")
-  const tabs = ["Web Apps", "Websites", "Motion", "Branding"]
+type ServiceTab = "Web Apps" | "Websites" | "Motion" | "Branding"
 
-  const servicesData = {
+export default function Delivery() {
+  const [activeTab, setActiveTab] = useState<ServiceTab>("Web Apps")
+
+  const tabs: ServiceTab[] = ["Web Apps", "Websites", "Motion", "Branding"]
+
+  const servicesData: Record<
+    ServiceTab,
+    { service: string; timeframe: string }[]
+  > = {
     "Web Apps": [
       { service: "MVP web app", timeframe: "2-10 weeks" },
       { service: "MVP mobile app", timeframe: "2-8 weeks" },
