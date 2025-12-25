@@ -10,7 +10,7 @@ export default function ProductUXPage() {
 
           <div className={styles.Productsheader}>
           <Image
-                      src="/images/logo.svg"
+                      src="/images/Logo.svg"
                       width={50}
                       height={50}
 

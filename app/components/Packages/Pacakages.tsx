@@ -39,7 +39,7 @@ const servicePlans: Record<string, ServicePlan> = {
     price: "$350",
     originalPrice: "$700",
     title: "Complete brand identity that makes you stand out.",
-    icon: "/logo.svg",
+    icon: "/Logo.svg",
     features: [
       "Brand strategy & guidelines",
       "Color palette & typography",
@@ -55,7 +55,7 @@ const servicePlans: Record<string, ServicePlan> = {
     price: "$150",
     originalPrice: "$300",
     title: "Memorable logos that represent your brand perfectly.",
-    icon: "/logo.svg",
+    icon: "/Logo.svg",
     features: [
       "Multiple design concepts",
       "Unlimited revisions",
@@ -158,7 +158,7 @@ export default function PackagesSection() {
                 <div className={styles.badge}>
                   <div className={styles.badgeHeader}>
                     <Image
-                      src="/images/logo.svg"
+                      src="/images/Logo.svg"
                       width={50}
                       height={50}
 
