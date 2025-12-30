@@ -1,20 +1,9 @@
 "use client";
-
 import { useState } from "react";
 import styles from "./ContactForm.module.css";
 
-interface ContactFormState {
-  name: string;
-  email: string;
-  startupName: string;
-  startupStage: string;
-  designPriority: string;
-  budget: string;
-  message: string;
-}
-
-export default function Contact() {
-  const [form, setForm] = useState<ContactFormState>({
+export default function ContactForm() {
+  const [form, setForm] = useState({
     name: "",
     email: "",
     startupName: "",
@@ -24,19 +13,14 @@ export default function Contact() {
     message: "",
   });
 
-  async function handleSubmit(
-    e: React.FormEvent<HTMLFormElement>
-  ) {
+  async function handleSubmit(e: any) {
     e.preventDefault();
-
     await fetch("/api/send-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
     });
-
     alert("Form submitted successfully!");
-
     setForm({
       name: "",
       email: "",
@@ -48,18 +32,11 @@ export default function Contact() {
     });
   }
 
-  const budgetOptions = [
-    "<$10k",
-    "$10k - $30k",
-    "$30k - $100k",
-    "$300k - $1M",
-    "$1M<",
-  ];
+  const budgetOptions = ["<$10k", "$10k - $30k", "$30k - $100k", "$300k - $1M", "$1M<"];
 
   return (
     <div className={styles.formCard}>
       <h2 className={styles.formTitle}>Book a Call</h2>
-
       <form onSubmit={handleSubmit} className={styles.formGrid}>
         <div className={styles.inputGroup}>
           <label>Your name*</label>
@@ -67,9 +44,7 @@ export default function Contact() {
             required
             type="text"
             value={form.name}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setForm({ ...form, name: e.target.value })
-            }
+            onChange={(e) => setForm({ ...form, name: e.target.value })}
           />
         </div>
 
@@ -79,9 +54,7 @@ export default function Contact() {
             required
             type="email"
             value={form.email}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setForm({ ...form, email: e.target.value })
-            }
+            onChange={(e) => setForm({ ...form, email: e.target.value })}
           />
         </div>
 
@@ -91,9 +64,7 @@ export default function Contact() {
             required
             type="text"
             value={form.startupName}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setForm({ ...form, startupName: e.target.value })
-            }
+            onChange={(e) => setForm({ ...form, startupName: e.target.value })}
           />
         </div>
 
@@ -102,9 +73,7 @@ export default function Contact() {
           <select
             required
             value={form.startupStage}
-            onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
-              setForm({ ...form, startupStage: e.target.value })
-            }
+            onChange={(e) => setForm({ ...form, startupStage: e.target.value })}
           >
             <option value="">Select stage</option>
             <option value="idea">Idea Stage</option>
@@ -118,9 +87,7 @@ export default function Contact() {
           <select
             required
             value={form.designPriority}
-            onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
-              setForm({ ...form, designPriority: e.target.value })
-            }
+            onChange={(e) => setForm({ ...form, designPriority: e.target.value })}
           >
             <option value="">Select priority</option>
             <option value="ui-ux">UI/UX Design</option>
@@ -136,8 +103,7 @@ export default function Contact() {
               <button
                 key={opt}
                 type="button"
-                className={`${styles.budgetBtn} ${form.budget === opt ? styles.activeBudget : ""
-                  }`}
+                className={`${styles.budgetBtn} ${form.budget === opt ? styles.activeBudget : ""}`}
                 onClick={() => setForm({ ...form, budget: opt })}
               >
                 {opt}
@@ -151,19 +117,13 @@ export default function Contact() {
           <textarea
             rows={5}
             value={form.message}
-            onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-              setForm({ ...form, message: e.target.value })
-            }
+            onChange={(e) => setForm({ ...form, message: e.target.value })}
           />
         </div>
 
         <div className={styles.formFooter}>
-          <button type="button" className={styles.backBtn}>
-            Back
-          </button>
-          <button type="submit" className={styles.submitBtn}>
-            Submit
-          </button>
+          <button type="button" className={styles.backBtn}>Back</button>
+          <button type="submit" className={styles.submitBtn}>Submit</button>
         </div>
       </form>
     </div>
