@@ -1,0 +1,126 @@
+.formCard {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.formTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: #111;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+}
+
+.fullWidth {
+  grid-column: span 2;
+}
+
+.budgetGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.budgetBtn {
+  padding: 10px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.budgetBtn.activeBudget {
+  background: #111;
+  color: white;
+  border-color: #111;
+}
+
+.formFooter {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.backBtn {
+  padding: 10px 25px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  font-weight: 600;
+}
+
+.submitBtn {
+  padding: 10px 30px;
+  background: #333;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .formCard {
+    padding: 20px;
+    border: none;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .fullWidth {
+    grid-column: span 1;
+  }
+
+  .formFooter {
+    grid-column: span 1;
+    flex-direction: column-reverse;
+  }
+
+  .backBtn,
+  .submitBtn {
+    width: 100%;
+  }
+
+  .budgetBtn {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+}
