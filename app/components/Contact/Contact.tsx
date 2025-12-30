@@ -13,7 +13,7 @@ interface ContactFormState {
   message: string;
 }
 
-export default function ContactForm() {
+export default function Contact() {
   const [form, setForm] = useState<ContactFormState>({
     name: "",
     email: "",
