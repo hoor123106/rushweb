@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import styles from "./CalendarSection.module.css";
+import ContactForm from "../Contact/Contact";
 
 export default function CalendarSection() {
   const [activeTab, setActiveTab] = useState("calendar");
@@ -45,15 +46,11 @@ export default function CalendarSection() {
           {activeTab === "calendar" ? (
             <Cal
               namespace="call-with-founder"
-              calLink="warda-dev-r96vlw/call-with-founder"
+              calLink="verda-izqy9g/wardas-project"
               className={styles.calEmbedElement}
               config={{ layout: "month_view" }}
             />
-          ) : (
-            <div className={styles.formPlaceholder}>
-              {/* Aap apna Form component yahan daal sakte hain */}
-              <p>Form coming soon...</p>
-            </div>
+          ) : (<ContactForm />
           )}
         </div>
       </div>
